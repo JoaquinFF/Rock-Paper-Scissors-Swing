@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d4400e0-c198-40b0-83ea-97156b3cb0bb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PiedraPapelTijera.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Model.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/View.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/icon.jpg" afterDir="false" />
+    <list default="true" id="6d4400e0-c198-40b0-83ea-97156b3cb0bb" name="Changes" comment="Ya casi termino la view, falta el ultimo panel para mostrar el final">
+      <change afterPath="$PROJECT_DIR$/src/PiedraPapelTijera.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/PanelEleccion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/PanelFinal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/PanelJuego.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/Ventana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +32,7 @@
   </component>
   <component name="ProjectId" id="2MNqpyogUHcxtjdRh4CKTUlfhow" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -62,6 +62,21 @@
       <option name="presentableId" value="Default" />
       <updated>1677618577493</updated>
     </task>
+    <task id="LOCAL-00001" summary="Ya casi termino la view, falta el ultimo panel para mostrar el final">
+      <created>1677802949436</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677802949437</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Ya casi termino la view, falta el ultimo panel para mostrar el final">
+      <created>1677803152426</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677803152426</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -77,5 +92,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Ya casi termino la view, falta el ultimo panel para mostrar el final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ya casi termino la view, falta el ultimo panel para mostrar el final" />
   </component>
 </project>
