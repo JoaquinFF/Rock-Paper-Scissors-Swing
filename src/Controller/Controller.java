@@ -9,13 +9,14 @@ import View.Ventana;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Controller implements ActionListener {
+public class Controller {
     public Model m;
     public View v;
     public PanelEleccion pE;
     public PanelJuego pJ;
     public PanelFinal pF;
     public Ventana vent;
+
 
     public Controller(Model m, View v, PanelEleccion pE, PanelJuego pJ, PanelFinal pF, Ventana vent){
         this.m = m;
@@ -25,40 +26,52 @@ public class Controller implements ActionListener {
         this.pF = pF;
         this.vent = vent;
 
+        vent.paneles.add(pE, "pE");
+        vent.paneles.add(pJ, "pJ");
+        vent.paneles.add(pF, "pF");
+
         vent.setVisible(true);
-        vent.cardLayout.show(vent.paneles, "pF");
+        vent.cardLayout.show(vent.paneles, "pE");
 
-        pE.ronda1.addActionListener(this);//Checkear por que los botones no llaman al metodo. Probar poner el addevent en el archivo origen de cada boton
-        pE.ronda3.addActionListener(this);
-        pE.ronda5.addActionListener(this);
+        pE.ronda1.addActionListener(e -> ronda1ButtonPressed());//Checkear por que los botones no llaman al metodo. Probar poner el addevent en el archivo origen de cada boton
+        pE.ronda3.addActionListener(e -> ronda3ButtonPressed());
+        pE.ronda5.addActionListener(e -> ronda5ButtonPressed());
 
-        pJ.rockButton.addActionListener(this);
-        pJ.paperButton.addActionListener(this);
-        pJ.scissorsButton.addActionListener(this);
+        pJ.rockButton.addActionListener(e -> rockButtonPressed());
+        pJ.paperButton.addActionListener(e -> paperButtonPressed());
+        pJ.scissorsButton.addActionListener(e -> scissorsButtonPressed());
 
-        pF.reiniciar.addActionListener(this);
-        pF.salir.addActionListener(this);
+        pF.reiniciar.addActionListener(e -> reiniciarButtonPressed());
+        pF.salir.addActionListener(e -> salirButtonPressed());
+    }
+    private void ronda1ButtonPressed(){
+        System.out.println("Hola"); //FUNCIONAAAAAAA, AGREGAR TODOS LOS METODOS CORRESPONDIENTES
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if(e.getSource().equals(pE.ronda1)){
-            m.rondas(1);
-            vent.cardLayout.show(vent.paneles, "pJ");
-        } else if (e.getSource() == pE.ronda3) {
-            m.rondas(3);
-        } else if (e.getSource() == pE.ronda5) {
-            m.rondas(5);
-        } else if (e.getSource() == pJ.rockButton) {
-            m.combate(1);
-        } else if (e.getSource() == pJ.paperButton) {
-            m.combate(2);
-        } else if (e.getSource() == pJ.scissorsButton) {
-            m.combate(3);
-        } else if (e.getSource() == pF.reiniciar) {
-            m.reiniciar();
-        } else if (e.getSource() == pF.salir) {
-            m.salir();
-        }
+    private void ronda3ButtonPressed(){
+
+    }
+    private void ronda5ButtonPressed(){
+
+    }
+
+    private void rockButtonPressed(){
+
+    }
+
+    private void paperButtonPressed(){
+
+    }
+
+    private void scissorsButtonPressed(){
+
+    }
+
+    private void reiniciarButtonPressed(){
+
+    }
+
+    private void salirButtonPressed(){
+
     }
 }
