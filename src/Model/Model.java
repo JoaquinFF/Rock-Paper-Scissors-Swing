@@ -13,7 +13,8 @@ public class Model {
     public PanelFinal pF = new PanelFinal();
     public Ventana vent;
     public int nRondas;
-    public int[] arrayAtaques;
+    public String[] arrayAtaques;
+    protected int numeroAtaques = 0;
 
     public Model(Ventana vent){
         this.vent = vent;
@@ -21,15 +22,33 @@ public class Model {
 
     public void rondas(int nRondas){
         this.nRondas = nRondas;
-        arrayAtaques = new int[nRondas];
-
+        arrayAtaques = new String[nRondas];
         vent.cardLayout.show(vent.paneles, "pJ");
     }
 
     public void combate(int ataque){
-        //la funcion de combate,
-        //Revise si el boton se ha tocado la cantidad de veces esperada
-        //y si es asi, cambie la ventana
+        String texto = "";
+        if(numeroAtaques < nRondas ){
+            if(ataque == 1){
+                arrayAtaques[numeroAtaques] = "PIEDRA";
+            } else if (ataque == 2) {
+                arrayAtaques[numeroAtaques] = "PAPEL";
+            } else {
+                arrayAtaques[numeroAtaques] = "TIJERA";
+            }
+
+            for(int i = 0; i <= numeroAtaques; i++){
+                texto = arrayAtaques[i] + ", ";
+                //System.out.println(texto);
+                pJ.updateMessage(texto);
+            }
+
+            numeroAtaques++;
+
+            if(numeroAtaques == nRondas){
+               vent.cardLayout.show(vent.paneles, "pF");
+            }
+        }
     }
 
     public void reiniciar(){

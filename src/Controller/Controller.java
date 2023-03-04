@@ -45,26 +45,26 @@ public class Controller {
         pF.salir.addActionListener(e -> salirButtonPressed());
     }
     private void ronda1ButtonPressed(){
-        System.out.println("Hola"); //FUNCIONAAAAAAA, AGREGAR TODOS LOS METODOS CORRESPONDIENTES
+        m.rondas(1);
     }
 
     private void ronda3ButtonPressed(){
-
+        m.rondas(3);
     }
     private void ronda5ButtonPressed(){
-
+        m.rondas(5);
     }
 
     private void rockButtonPressed(){
-
+        m.combate(1);
     }
 
     private void paperButtonPressed(){
-
+        m.combate(2);
     }
 
     private void scissorsButtonPressed(){
-
+        m.combate(3);
     }
 
     private void reiniciarButtonPressed(){

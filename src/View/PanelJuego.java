@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PanelJuego extends JPanel{
+    private JLabel mensaje;
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -25,8 +26,10 @@ public class PanelJuego extends JPanel{
         add(rockButton);
         add(paperButton);
         add(scissorsButton);
+        add(ataques);
 
         Cursor cursor = new Cursor(Cursor.HAND_CURSOR);
+        Font fuente = new Font("Arial", Font.PLAIN, 18);
 
         rockButton.setBounds(50, 150, 200, 200);
         rockButton.setBackground(new Color(0,0,0,0));
@@ -46,6 +49,16 @@ public class PanelJuego extends JPanel{
         scissorsButton.setContentAreaFilled(false);
         scissorsButton.setCursor(cursor);
 
+        ataques.setBounds(75, 400, 150, 100);
+        ataques.setFont(fuente);
+
+        mensaje = new JLabel();
+        mensaje.setBounds(200, 400, 300, 100);
+        mensaje.setFont(fuente);
+        mensaje.setPreferredSize(new Dimension(300,100));
+        mensaje.setVisible(true);
+        add(mensaje);
+
     }
     Toolkit toolkit = Toolkit.getDefaultToolkit();
 
@@ -57,4 +70,13 @@ public class PanelJuego extends JPanel{
 
     Image scissors = toolkit.getImage("src/View/tijera.png");
     public JButton scissorsButton = new JButton(new ImageIcon(scissors));
+
+    public JLabel ataques = new JLabel("Sus ataques: ");
+
+
+    public void updateMessage(String msg){
+        System.out.println(mensaje.getText()); //No esta recibiendo datos limpios, analizar
+        mensaje.setText(msg);
+        repaint();
+    }
 }

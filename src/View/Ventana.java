@@ -6,18 +6,19 @@ import java.awt.*;
 
 public class Ventana extends JFrame {
     public JPanel paneles;
-    public CardLayout cardLayout = new CardLayout();
+    public CardLayout cardLayout;
 
     public Ventana(){
-
-        PanelEleccion panelEleccion = new PanelEleccion();
-        PanelJuego panelJuego = new PanelJuego();
-        PanelFinal panelFinal = new PanelFinal();
-
+        cardLayout = new CardLayout();
         paneles = new JPanel(cardLayout);
-        paneles.add(panelEleccion, "pE");
-        paneles.add(panelJuego, "pJ");
-        paneles.add(panelFinal, "pF");
+
+        PanelEleccion pE = new PanelEleccion();
+        PanelJuego pJ = new PanelJuego();
+        PanelFinal pF = new PanelFinal();
+
+        paneles.add(pE, "pE");
+        paneles.add(pJ, "pJ");
+        paneles.add(pF, "pF");
 
         add(paneles);
 
