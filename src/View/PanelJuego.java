@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PanelJuego extends JPanel{
-    private JLabel mensaje;
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -27,6 +26,7 @@ public class PanelJuego extends JPanel{
         add(paperButton);
         add(scissorsButton);
         add(ataques);
+        add(mensaje);
 
         Cursor cursor = new Cursor(Cursor.HAND_CURSOR);
         Font fuente = new Font("Arial", Font.PLAIN, 18);
@@ -52,12 +52,10 @@ public class PanelJuego extends JPanel{
         ataques.setBounds(75, 400, 150, 100);
         ataques.setFont(fuente);
 
-        mensaje = new JLabel();
         mensaje.setBounds(200, 400, 300, 100);
         mensaje.setFont(fuente);
         mensaje.setPreferredSize(new Dimension(300,100));
         mensaje.setVisible(true);
-        add(mensaje);
 
     }
     Toolkit toolkit = Toolkit.getDefaultToolkit();
@@ -73,10 +71,9 @@ public class PanelJuego extends JPanel{
 
     public JLabel ataques = new JLabel("Sus ataques: ");
 
-
+    public JLabel mensaje = new JLabel();
     public void updateMessage(String msg){
-        System.out.println(mensaje.getText()); //No esta recibiendo datos limpios, analizar
+        System.out.println(msg); //No esta recibiendo datos limpios, analizar
         mensaje.setText(msg);
-        repaint();
     }
 }

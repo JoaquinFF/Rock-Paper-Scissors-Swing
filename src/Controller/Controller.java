@@ -68,10 +68,10 @@ public class Controller {
     }
 
     private void reiniciarButtonPressed(){
-
+        m.reiniciar();
     }
 
     private void salirButtonPressed(){
-
+        m.salir();
     }
 }

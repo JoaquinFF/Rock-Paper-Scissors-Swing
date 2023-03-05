@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/src/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Model.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/PanelJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/PanelJuego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Ventana.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +47,20 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Joaquin\Documents\Escuela\UDA\Primer año\Segundo Semestre\PiedraPapelTijera\src\View" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="PiedraPapelTijera" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PiedraPapelTijera" />
+      <module name="PiedraPapelTijera" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PiedraPapelTijera" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

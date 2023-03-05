@@ -5,15 +5,19 @@ import View.PanelEleccion;
 import View.PanelJuego;
 import View.PanelFinal;
 import View.Ventana;
+
+import javax.swing.*;
 import java.lang.reflect.Array;
+import java.util.Random;
 
 public class Model {
     public PanelEleccion pE = new PanelEleccion();
     public PanelJuego pJ = new PanelJuego();
     public PanelFinal pF = new PanelFinal();
     public Ventana vent;
-    public int nRondas;
+    public int nRondas = 0;
     public String[] arrayAtaques;
+    public String[] arrayAtaquesEnemigo;
     protected int numeroAtaques = 0;
 
     public Model(Ventana vent){
@@ -23,6 +27,7 @@ public class Model {
     public void rondas(int nRondas){
         this.nRondas = nRondas;
         arrayAtaques = new String[nRondas];
+        arrayAtaquesEnemigo = new String[nRondas];
         vent.cardLayout.show(vent.paneles, "pJ");
     }
 
@@ -36,6 +41,8 @@ public class Model {
             } else {
                 arrayAtaques[numeroAtaques] = "TIJERA";
             }
+
+            arrayAtaquesEnemigo[numeroAtaques] = ataquesAleatorios();
 
             for(int i = 0; i <= numeroAtaques; i++){
                 texto = arrayAtaques[i] + ", ";
@@ -51,11 +58,25 @@ public class Model {
         }
     }
 
-    public void reiniciar(){
+    public String ataquesAleatorios(){
+        Random rand = new Random();
+        int numAtaque = rand.nextInt(3);
+        if (numAtaque ==  0){
+            return "PIEDRA";
+        } else if (numAtaque == 1) {
+            return "PAPEL";
+        } else {
+            return "TIJERA";
+        }
+    }
 
+    public void reiniciar(){
+        vent.cardLayout.show(vent.paneles, "pE");
+        nRondas = 0;
+        numeroAtaques = 0;
     }
 
     public void salir(){
-
+        vent.dispose();
     }
 }
