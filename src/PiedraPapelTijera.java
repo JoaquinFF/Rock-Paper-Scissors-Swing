@@ -13,7 +13,7 @@ public class PiedraPapelTijera {
         PanelJuego pJ = new PanelJuego();
         PanelFinal pF = new PanelFinal();
         Ventana vent = new Ventana();
-        Model m = new Model(vent);
+        Model m = new Model(vent, pE, pJ, pF);
         Controller c = new Controller(m, v, pE, pJ, pF, vent);
     }
 }

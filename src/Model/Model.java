@@ -11,17 +11,21 @@ import java.lang.reflect.Array;
 import java.util.Random;
 
 public class Model {
-    public PanelEleccion pE = new PanelEleccion();
-    public PanelJuego pJ = new PanelJuego();
-    public PanelFinal pF = new PanelFinal();
+    public PanelEleccion pE;
+    public PanelJuego pJ;
+    public PanelFinal pF;
     public Ventana vent;
     public int nRondas = 0;
     public String[] arrayAtaques;
     public String[] arrayAtaquesEnemigo;
     protected int numeroAtaques = 0;
+    protected String condicion;
 
-    public Model(Ventana vent){
+    public Model(Ventana vent, PanelEleccion pE, PanelJuego pJ, PanelFinal pF){
         this.vent = vent;
+        this.pE = pE;
+        this.pJ = pJ;
+        this.pF = pF;
     }
 
     public void rondas(int nRondas){
@@ -45,7 +49,7 @@ public class Model {
             arrayAtaquesEnemigo[numeroAtaques] = ataquesAleatorios();
 
             for(int i = 0; i <= numeroAtaques; i++){
-                texto = arrayAtaques[i] + ", ";
+                texto += arrayAtaques[i] + ", ";
                 //System.out.println(texto);
                 pJ.updateMessage(texto);
             }
@@ -53,7 +57,18 @@ public class Model {
             numeroAtaques++;
 
             if(numeroAtaques == nRondas){
-               vent.cardLayout.show(vent.paneles, "pF");
+                for(int i = 0; i < nRondas; i++){
+                    if(arrayAtaques[i] == "PIEDRA" && arrayAtaquesEnemigo[i] == "TIJERA"){
+                        condicion = "GANASTE";
+                    } else if (arrayAtaques[i] == "PAPEL" && arrayAtaquesEnemigo[i] == "PIEDRA") {
+                        condicion = "GANASTE";
+                    } else if (arrayAtaques[i] == "TIJERA" && arrayAtaquesEnemigo[i] == "PAPEL") {
+                        condicion = "GANASTE";
+                    } else {
+                        condicion = "PERDISTE";
+                    }
+                }
+                vent.cardLayout.show(vent.paneles, "pF");
             }
         }
     }

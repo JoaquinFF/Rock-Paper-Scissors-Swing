@@ -73,7 +73,7 @@ public class PanelJuego extends JPanel{
 
     public JLabel mensaje = new JLabel();
     public void updateMessage(String msg){
-        System.out.println(msg); //No esta recibiendo datos limpios, analizar
+        System.out.println(mensaje.getText());
         mensaje.setText(msg);
     }
 }
