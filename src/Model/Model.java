@@ -1,13 +1,10 @@
 package Model;
 
-import View.View;
 import View.PanelEleccion;
 import View.PanelJuego;
 import View.PanelFinal;
 import View.Ventana;
 
-import javax.swing.*;
-import java.lang.reflect.Array;
 import java.util.Random;
 
 public class Model {
@@ -18,6 +15,8 @@ public class Model {
     public int nRondas = 0;
     public String[] arrayAtaques;
     public String[] arrayAtaquesEnemigo;
+    private int victorias;
+    private int victoriasEnemigo;
     protected int numeroAtaques = 0;
     protected String condicion;
 
@@ -50,7 +49,6 @@ public class Model {
 
             for(int i = 0; i <= numeroAtaques; i++){
                 texto += arrayAtaques[i] + ", ";
-                //System.out.println(texto);
                 pJ.updateMessage(texto);
             }
 
@@ -59,15 +57,27 @@ public class Model {
             if(numeroAtaques == nRondas){
                 for(int i = 0; i < nRondas; i++){
                     if(arrayAtaques[i] == "PIEDRA" && arrayAtaquesEnemigo[i] == "TIJERA"){
-                        condicion = "GANASTE";
+                        victorias++;
                     } else if (arrayAtaques[i] == "PAPEL" && arrayAtaquesEnemigo[i] == "PIEDRA") {
-                        condicion = "GANASTE";
+                        victorias++;
                     } else if (arrayAtaques[i] == "TIJERA" && arrayAtaquesEnemigo[i] == "PAPEL") {
-                        condicion = "GANASTE";
+                        victorias++;
+                    } else if (arrayAtaques[i] == arrayAtaquesEnemigo[i]) {
+                        
                     } else {
-                        condicion = "PERDISTE";
+                        victoriasEnemigo++;
                     }
                 }
+
+                if(victorias > victoriasEnemigo){
+                    condicion = "GANASTE";
+                } else if (victoriasEnemigo > victorias) {
+                    condicion = "PERDISTE";
+                } else {
+                    condicion = "EMPATE";
+                }
+
+                mostrarMFinal();
                 vent.cardLayout.show(vent.paneles, "pF");
             }
         }
@@ -85,10 +95,26 @@ public class Model {
         }
     }
 
+    public void mostrarMFinal(){
+        String textoAliado = "";
+        String textoEnemigo = "";
+        for(int i = 0; i < nRondas; i++){
+            textoAliado += arrayAtaques[i] + "\n";
+            textoEnemigo += arrayAtaquesEnemigo[i] + "\n";
+        }
+        pF.updateAtaques(textoAliado);
+        pF.updateAtaquesEnemigos(textoEnemigo);
+        pF.updateCondicion(condicion);
+    }
+
     public void reiniciar(){
         vent.cardLayout.show(vent.paneles, "pE");
         nRondas = 0;
         numeroAtaques = 0;
+        victorias = 0;
+        victoriasEnemigo = 0;
+        condicion = "";
+        pJ.updateMessage("");
     }
 
     public void salir(){

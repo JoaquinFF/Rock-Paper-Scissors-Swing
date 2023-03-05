@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d4400e0-c198-40b0-83ea-97156b3cb0bb" name="Changes" comment="Error de updateo de texto en la view. Revisar">
+    <list default="true" id="6d4400e0-c198-40b0-83ea-97156b3cb0bb" name="Changes" comment="Se updatea el texto, falta imprimir la condicion y los ataques de cada jugador. Luego cumplir condiciones">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PiedraPapelTijera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PiedraPapelTijera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/PanelEleccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/PanelEleccion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/PanelFinal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/PanelFinal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/PanelJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/PanelJuego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Ventana.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677803152426</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Se updatea el texto, falta imprimir la condicion y los ataques de cada jugador. Luego cumplir condiciones">
+      <created>1677988607075</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677988607075</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -88,6 +98,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Ya casi termino la view, falta el ultimo panel para mostrar el final" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ya casi termino la view, falta el ultimo panel para mostrar el final" />
+    <MESSAGE value="Se updatea el texto, falta imprimir la condicion y los ataques de cada jugador. Luego cumplir condiciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se updatea el texto, falta imprimir la condicion y los ataques de cada jugador. Luego cumplir condiciones" />
   </component>
 </project>

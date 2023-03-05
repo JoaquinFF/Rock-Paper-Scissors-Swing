@@ -6,8 +6,6 @@ import View.PanelEleccion;
 import View.PanelJuego;
 import View.PanelFinal;
 import View.Ventana;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Controller {
     public Model m;

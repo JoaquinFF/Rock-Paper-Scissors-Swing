@@ -55,8 +55,6 @@ public class PanelJuego extends JPanel{
         mensaje.setBounds(200, 400, 300, 100);
         mensaje.setFont(fuente);
         mensaje.setPreferredSize(new Dimension(300,100));
-        mensaje.setVisible(true);
-
     }
     Toolkit toolkit = Toolkit.getDefaultToolkit();
 
@@ -73,7 +71,6 @@ public class PanelJuego extends JPanel{
 
     public JLabel mensaje = new JLabel();
     public void updateMessage(String msg){
-        System.out.println(mensaje.getText());
         mensaje.setText(msg);
     }
 }
