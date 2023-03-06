@@ -1,30 +1,57 @@
 package Model;
 
+import View.PanelRules;
 import View.PanelEleccion;
 import View.PanelJuego;
 import View.PanelFinal;
 import View.Ventana;
 
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Random;
 
 public class Model {
-    public PanelEleccion pE;
-    public PanelJuego pJ;
-    public PanelFinal pF;
-    public Ventana vent;
-    public int nRondas = 0;
-    public String[] arrayAtaques;
-    public String[] arrayAtaquesEnemigo;
+    private PanelRules pR;
+    private PanelEleccion pE;
+    private PanelJuego pJ;
+    private PanelFinal pF;
+    private Ventana vent;
+    private int nRondas = 0;
+    private String[] arrayAtaques;
+    private String[] arrayAtaquesEnemigo;
     private int victorias;
     private int victoriasEnemigo;
-    protected int numeroAtaques = 0;
-    protected String condicion;
+    private int numeroAtaques = 0;
+    private String condicion;
 
-    public Model(Ventana vent, PanelEleccion pE, PanelJuego pJ, PanelFinal pF){
+    public Model(Ventana vent, PanelRules pR, PanelEleccion pE, PanelJuego pJ, PanelFinal pF){
         this.vent = vent;
+        this.pR = pR;
         this.pE = pE;
         this.pJ = pJ;
         this.pF = pF;
+    }
+
+    public void leerReglas(){
+        try {
+            FileReader reglas = new FileReader("src/Files/Rules.txt");
+            int c = 0;
+            String texto = "";
+
+            while(c != -1){
+                c = reglas.read();
+                char letra = (char) c;
+                texto += letra;
+            }
+            pR.updateReglas(texto);
+            reglas.close();
+        } catch (IOException e){
+            System.out.println(e);
+        }
+    }
+
+    public void continuar(){
+        vent.cardLayout.show(vent.paneles, "pE");
     }
 
     public void rondas(int nRondas){
