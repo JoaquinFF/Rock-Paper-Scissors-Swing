@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d4400e0-c198-40b0-83ea-97156b3cb0bb" name="Changes" comment="Termine el proyecto, falta respetar encapsulamiento y emprolijar">
-      <change afterPath="$PROJECT_DIR$/src/Files/Rules.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/PanelRules.java" afterDir="false" />
+    <list default="true" id="6d4400e0-c198-40b0-83ea-97156b3cb0bb" name="Changes" comment="Termine todo el encapsulamiento y agregué lectura de archivos. Falta escritura y pasar todo a NB">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PiedraPapelTijera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PiedraPapelTijera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/PanelFinal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/PanelFinal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Ventana.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678048564440</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Termine todo el encapsulamiento y agregué lectura de archivos. Falta escritura y pasar todo a NB">
+      <created>1678086390094</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678086390094</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,6 +109,7 @@
     <MESSAGE value="Ya casi termino la view, falta el ultimo panel para mostrar el final" />
     <MESSAGE value="Se updatea el texto, falta imprimir la condicion y los ataques de cada jugador. Luego cumplir condiciones" />
     <MESSAGE value="Termine el proyecto, falta respetar encapsulamiento y emprolijar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Termine el proyecto, falta respetar encapsulamiento y emprolijar" />
+    <MESSAGE value="Termine todo el encapsulamiento y agregué lectura de archivos. Falta escritura y pasar todo a NB" />
+    <option name="LAST_COMMIT_MESSAGE" value="Termine todo el encapsulamiento y agregué lectura de archivos. Falta escritura y pasar todo a NB" />
   </component>
 </project>

@@ -7,6 +7,7 @@ import View.PanelFinal;
 import View.Ventana;
 
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
 
@@ -125,13 +126,26 @@ public class Model {
     public void mostrarMFinal(){
         String textoAliado = "";
         String textoEnemigo = "";
+        String aliado = "";
+        String enemigo = "\n Ataques de la IA \n";
         for(int i = 0; i < nRondas; i++){
             textoAliado += arrayAtaques[i] + "\n";
             textoEnemigo += arrayAtaquesEnemigo[i] + "\n";
         }
+        aliado = "\n Ataques del jugador: \n" + textoAliado + enemigo  + textoEnemigo;
         pF.updateAtaques(textoAliado);
         pF.updateAtaquesEnemigos(textoEnemigo);
         pF.updateCondicion(condicion);
+
+        try {
+            FileWriter historialJugadas = new FileWriter("src/Files/Historial.txt", true);
+            for (int i = 0; i < aliado.length(); i++) {
+                historialJugadas.write(aliado.charAt(i));
+            }
+            historialJugadas.close();
+        } catch (IOException e){
+            System.out.println(e);
+        }
     }
 
     public void reiniciar(){
